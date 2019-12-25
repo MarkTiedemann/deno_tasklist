@@ -27,4 +27,4 @@ third_party\fastlist-0.1.0.exe:
 .PHONY: clean
 clean:
 	-rmdir /q /s third_party deno_dir
-	-del /f /q fastlist.js fastlist-0.1.0.exe .tested
+	-del /f /q fastlist.js .tested %LOCALAPPDATA%\fastlist-0.1.0.exe

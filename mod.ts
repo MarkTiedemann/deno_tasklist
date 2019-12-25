@@ -1,13 +1,7 @@
 import { writeExe } from "./fastlist.js";
 
 export async function tasklist() {
-  let url = import.meta.url;
-  let filename =
-    url.substr(
-      8 /* "file:///".length */,
-      url.length - 14 /* "file:///".length + "mod.ts".length */
-    ) + "fastlist-0.1.0.exe";
-
+  let filename = Deno.env().LOCALAPPDATA + "\\fastlist-0.1.0.exe";
   try {
     await Deno.stat(filename);
   } catch {
